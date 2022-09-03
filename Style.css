@@ -1,0 +1,160 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+    background-color: RGB(235, 52, 195);
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*! My code starts*/ 
+
+.Button {
+position: relative;
+top: 500px;
+left: 500px;
+padding:0;
+margin:0;
+cursor: pointer;
+border: none;
+border-radius: 15px;
+box-shadow: 0px 5020px 0px 0px rgb(77, 25, 33);
+
+
+
+}
+.Button:active{
+    transform: translateY(20px);
+
+}
+
+
+
+.Dom {
+position: relative;
+bottom: 400px;
+left: 550px;
+}
+img {
+    position: relative;
+    bottom: 400px;
+    left: 550px;
+    width: 400px;
+    height: 600px;
+    }
+
+.kicked {
+    position: relative;
+    bottom: 400px;
+    left: 550px;
+    width: 400px;
+    height: 600px;
+    background: url('kick.jpg')no-repeat;
+}
+.unkicked {
+    position: relative;
+    bottom: 400px;
+    left: 550px;
+    width: 400px;
+    height: 600px;
+    background: url('no_kick.jpg') no-repeat;
+}
+h2 {
+    margin: 0 50px;
+    font-size: 500px;
+}
