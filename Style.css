@@ -1,0 +1,97 @@
+html {
+    height: 100%;
+}
+
+
+body {
+    line-height:1;
+    background-image: linear-gradient(rgb(240, 134, 208),rgb(73, 147, 156));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+}
+
+#Button {
+
+cursor: pointer;
+border: none;
+touch-action: manipulation;
+
+}
+#IB1{
+    width: 30%;
+    height: 25%;
+    max-height: 800px;
+    touch-action: manipulation;
+
+}
+
+
+#Button:active{
+    transform: translateY(20px);
+
+}
+#thumbnail{
+    
+    width: 100%;
+    max-width: 500px;
+    
+
+    
+
+}
+    
+#kicked {
+    
+    width: 60%;
+    height: 70%;
+    background: url('kick.jpg')no-repeat;
+    max-height: 800px;
+    
+    
+    
+}
+#nokick {
+    width: 60%;
+    height: 70%;
+    background: url('no_kick.jpg') no-repeat;
+    max-height: 800px;
+    
+}
+
+.container {
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items:center;
+
+width:90%;
+height: auto;
+
+
+}
+
+audio {
+   
+   position: relative;
+   
+    
+}
+#counter {
+    position: relative;
+    font-family: impact;
+    font-size:400%;
+    color: rgb(52, 250, 141);
+    right: 35%;
+    bottom: 100%;
+    
+
+    
+}
+.chairandcounter {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
