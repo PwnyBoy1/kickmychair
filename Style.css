@@ -1,0 +1,102 @@
+html {
+    height: 100%;
+}
+@font-face {
+    font-family: 'ChairFont';
+    src: url(KickMyC/Chairfont.ttf);
+}
+    
+
+body {
+    line-height:1;
+    background-image: linear-gradient(rgb(240, 134, 208),rgb(73, 147, 156));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+#Button {
+
+cursor: pointer;
+border: none;
+touch-action: manipulation;
+
+}
+#IB1{
+    width: 60%;
+    height: 35%;
+    max-height: 500px;
+    touch-action: manipulation;
+    
+
+}
+
+
+#Button:active{
+    transform: translateY(20px);
+    transition: 0.1s ease;
+
+}
+#thumbnail{
+    
+    width: 100%;
+    max-width: 1000px;
+    
+
+    
+
+}
+    
+#kicked {
+    
+    width: 60%;
+    height: 70%;
+    background: url('kick.jpg')no-repeat;
+    max-height: 800px;
+    
+    
+    
+}
+#nokick {
+    width: 60%;
+    height: 70%;
+    background: url('no_kick.jpg') no-repeat;
+    max-height: 800px;
+    
+}
+
+.container {
+margin: 0 auto;
+
+
+
+
+
+width:90%;
+height: auto;
+
+
+}
+
+audio {
+   
+   transform: translateY(30%);
+    
+}
+#counter {
+    font-family: "ChairFont";
+    font-size:7vw;
+    color: rgb(52, 250, 141);
+    position: relative;
+    left: 45%;
+    
+    
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
