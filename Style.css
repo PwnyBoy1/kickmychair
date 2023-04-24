@@ -20,7 +20,6 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     flex-wrap: wrap;
-    text-align: center;
 
 }
 .links{
@@ -29,12 +28,13 @@ body {
     gap: 25px;
     display: flex;
     text-align: center;
-   
+    padding-left: 0px;
 
     
 }
 a{
     text-decoration: none;
+    flex-wrap: nowrap;
 }
 #Button {
 
@@ -100,7 +100,7 @@ audio {
 }
 #counter {
     font-family: "ChairFont";
-    font-size:4vw;
+    font-size:6vw;
     color: rgb(52, 250, 141);
     
     
