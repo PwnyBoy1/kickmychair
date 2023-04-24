@@ -12,20 +12,41 @@ body {
     background-image: linear-gradient(rgb(240, 134, 208),rgb(73, 147, 156));
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+.links{
+    list-style: none;
+    text-decoration: none;
+    gap: 25px;
+    display: flex;
+
     
 }
-
+a{
+    text-decoration: none;
+}
 #Button {
 
 cursor: pointer;
 border: none;
 touch-action: manipulation;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
 }
 #IB1{
     width: 60%;
     height: 35%;
-    max-height: 500px;
+    max-height: 300px;
     touch-action: manipulation;
     
 
@@ -40,7 +61,7 @@ touch-action: manipulation;
 #thumbnail{
     
     width: 100%;
-    max-width: 1000px;
+    max-width: 300px;
     
 
     
@@ -48,32 +69,25 @@ touch-action: manipulation;
 }
     
 #kicked {
-    
-    width: 60%;
-    height: 70%;
     background: url('kick.jpg')no-repeat;
-    max-height: 800px;
+    max-height: 400px;
     
     
     
 }
 #nokick {
-    width: 60%;
-    height: 70%;
     background: url('no_kick.jpg') no-repeat;
-    max-height: 800px;
+    max-height: 400px;
     
 }
 
 .container {
 margin: 0 auto;
-
-
-
-
-
-width:90%;
 height: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
 
 }
@@ -81,22 +95,16 @@ height: auto;
 audio {
    
    transform: translateY(30%);
+
     
 }
 #counter {
     font-family: "ChairFont";
-    font-size:7vw;
+    font-size:4vw;
     color: rgb(52, 250, 141);
-    position: relative;
-    left: 45%;
     
     
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-}
+
 

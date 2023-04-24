@@ -11,28 +11,37 @@
         </style>
         </head>
         <body>
-            <div class="container">   
-            
+            <div class="nav">
                 <div>
-                    <a href="https://kickmychair.com/"><img src="KickMyC\thumbnail.png" id="thumbnail" alt="Kick My Chair Logo"></a>
+                    <a href="https://kickmychair.com/"><img src="KickMyC\header.png" id="thumbnail" alt="Kick My Chair Logo"></a>
                 </div>
-                  
-                    <div class="chairandcounter"> 
-        
-                        <img src="KickMyC\no_kick.jpg" id="nokick" alt="Kick My Chair">
-                       
-                    </div>
-                        <div class="chairandcounter " id="Button">
-                            <input id="IB1" type="Image" src="KickMyC\button.png" alt="button" onclick="increment();switching();setTimeout(switchback, 200)";>
-                        </div>
-                <script src="main.js"></script>
-                                    <div>
-                                        <audio controls loop id='song'>
-                                            <source src="KickMyC\kicksong.mp3" type="audio/mpeg">
-                                        </audio>
-                                    </div>                 
+                <ul class="links">
+                    <li><a href="">Home</a></li>  
+                    <li><a href="">About us</a></li>  
+                    <li><a href="">Store</a></li>
+                    <li><a href="">Sign Up</a></li>
+                    <li><a href="">Log in</a></li>
+                    <li><a href="">Log out</a></li>
+                </ul>
+
             </div>
-         <h1 id="counter"></h1>
+                <div class="container">
+                    
+            
+                            <img src="KickMyC\no_kick.jpg" id="nokick" alt="Kick My Chair">
+
+                            <div class="chairandcounter" id="Button">
+                                <input id="IB1" type="Image" src="KickMyC\button.png" alt="button" onclick="increment();switching();setTimeout(switchback, 200)";>
+                            
+                    
+                                        <div>
+                                            <audio controls loop autoplay id='song'>
+                                                <source src="KickMyC\kicksong.mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div> 
+                                            <h1 id="counter"></h1>                
+                </div>
+                <script src="main.js"></script>
         </body> 
                                 
 </html> 
