@@ -26,6 +26,7 @@ body {
     text-decoration: none;
     gap: 25px;
     display: flex;
+    flex-wrap: wrap;
 
     
 }
@@ -59,13 +60,9 @@ align-items: center;
 
 }
 #thumbnail{
-    
-    width: 100%;
+
     max-width: 300px;
     
-
-    
-
 }
     
 #kicked {
