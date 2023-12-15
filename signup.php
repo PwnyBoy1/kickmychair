@@ -6,10 +6,10 @@ session_start();
         
     <link rel="stylesheet" href="Style.css" type="text/css">
 </head>
-
+<div class="signup-body">
     <div class="form-page">
 
-        <div class="form-container" >
+        <div class="form-container" style="border: 1px solid black;" >
             <h2>Sign Up</h2>
             <form class="signup-form" action="includes/signup.inc.php" method="post">
                 <input type="text" name="name" placeholder="Full name...">
@@ -25,7 +25,7 @@ session_start();
 
 
 
-
+</div>
 
 
 

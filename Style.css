@@ -1,12 +1,11 @@
 
 @font-face {
     font-family: 'ChairFont';
-    src: url(./KickMyC/Chairfont.ttf);
+    src: url('./KickMyC/ChairFont.woff') format('truetype');
 }
 body {
     line-height:1;
-    background-image: linear-gradient(rgb(240, 134, 208),rgb(73, 147, 156));
-    background-repeat: no-repeat;
+    background-image: linear-gradient(#e465ff,#3dcaff);
     background-attachment: fixed;
 
 }
@@ -91,38 +90,59 @@ align-items: center;
 
 #counter {
     font-size:7vw;
-    color: rgb(52, 250, 141);
+    color: #45ff7d;
     text-align: center;
     padding-top: 0px;
     margin-top: 10px;
     
     
 }
+@media (max-width: 768px) {
+    #counter {
+        font-size: 25vw;
+    }
+}
+.signup-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    
+}
 .form-page{
     display:flex;
     justify-content: center;
     align-items: center;
+    
+
 }
 
 .form-container{
     display: flex;
     flex-direction: column;
-    width: 500px;
-    padding:2rem 1rem;
+    padding:1rem 1rem;
     align-items: center;
     justify-content: center;
+    background-color: #00d961;
+    border-radius: 30px;
 
 }
 .form-container h2{
     text-align: center;
+
 }
-form.signup-form{
+.signup-form{
     display: flex;
     flex-direction: column;
+    
 }
 form.login-form{
     display: flex;
     flex-direction: column;
+}
+.signup-form input{
+    margin-bottom:20px;
 }
 
 .login-page{
