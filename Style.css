@@ -112,7 +112,7 @@ align-items: center;
     
 }
 
-.form-container{
+.form-container, .login-container{
     display: flex;
     flex-direction: column;
     padding:1rem 1rem;
@@ -122,20 +122,16 @@ align-items: center;
     border-radius: 30px;
 
 }
-.form-container h2{
-    text-align: center;
-}
-.signup-form{
+
+
+.signup-form, .login-form{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-form.login-form{
-    display: flex;
-    flex-direction: column;
-}
 
-.signup-form input{
+
+.signup-form input, .login-form input{
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -168,7 +164,7 @@ input:valid + .placeholder{
     width: 100%;
     margin-bottom: 10px;
 }
-.signup-form button{
+.signup-form button, .login-form button{
     padding: 10px 20px;
     background-color: #e465ff;
     cursor: pointer;
