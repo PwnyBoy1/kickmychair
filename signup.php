@@ -8,9 +8,10 @@ session_start();
 </head>
 <div class="signup-body">
 
-        <div class="form-container" style="border: 1px solid black;" >
+        <div class="form-container" >
             <h2>Sign Up</h2>
-            <form class="signup-form" action="includes/signup.inc.php" method="post">
+            <form class="signup-form" action="./includes/signup.inc.php" method="post">
+                
                 <div class="input-container">
                     <input type="text" name="name" id="name" required>
                     <label class="placeholder">Full Name</label>

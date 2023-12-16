@@ -111,6 +111,15 @@ align-items: center;
     height: 75vh;
     
 }
+.login-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+}
+
+
 
 .form-container, .login-container{
     display: flex;
@@ -141,10 +150,12 @@ align-items: center;
     font-size: 16px;
     
 }
-.placeholder {
+
+.placeholder{
     position: absolute;
     top: 50%;
     left: 10px;
+    padding:0 5px;
     transform: translateY(-50%);
     transition: top 0.3s, font-size 0.3s, background-color .3s;
     font-size: 16px;
@@ -154,11 +165,12 @@ align-items: center;
 input:focus + .placeholder,
 input:valid + .placeholder{
     background-color: #e465ff;
-    top:0%;
-    padding:0 5px;
+    top:-10%;
+    padding:5px 5px;
     border-radius: 5px;
     font-size: 14px;
 }
+
 .input-container {
     position: relative;
     width: 100%;
@@ -171,23 +183,11 @@ input:valid + .placeholder{
     box-shadow: none;
     border: none;
 }
-.login-page{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.login-container{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    padding:2rem 1rem;
-    align-items: center;
-    justify-content: center;
     
 
 
-}
+
 .login-container h2{
     text-align: center;
 }
