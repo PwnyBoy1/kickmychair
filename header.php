@@ -26,6 +26,7 @@ session_start();
                 ?>
                     <li><a href="./index.php">Home</a></li>  
                     <li><a href="./aboutus.php">About us</a></li>  
+                    <li><a href="./leaderboard.php">Leaderboard</a></li> 
                     <li><a href="./shop.php">Shop</a></li>
                     <li><a href="./includes/logout.inc.php">Log out</a></li>
                 <?php
@@ -36,6 +37,7 @@ session_start();
                 <ul class="links">
                     <li><a href="./index.php">Home</a></li>  
                     <li><a href="./aboutus.php">About us</a></li>  
+                    <li><a href="./leaderboard.php">Leaderboard</a></li>
                     <li><a href="./shop.php">Shop</a></li>
                     <li><a href="./signup.php">Sign Up</a></li>
                     <li><a href="./login.php">Log in</a></li>
