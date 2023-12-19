@@ -63,7 +63,8 @@ $user = $_SESSION['userid'];
             x = 1;
         }
     }
-
+<?php
+if(isset($_SESSION["userid"])){ ?>
     var data = <?php echo json_encode($counterValue); ?>;
     $('#counter').text(data);
     console.log(data);
@@ -75,6 +76,7 @@ $user = $_SESSION['userid'];
     $('#counter').text(data);
     sendCounterToServer(data);
     }
+    
 
     function sendCounterToServer(counterValue) {
         $.ajax({
@@ -89,6 +91,22 @@ $user = $_SESSION['userid'];
             }
         });
     }
+<?php   
+}
+else{ ?>
+    var data = <?php echo json_encode($counterValue); ?>;
+    $('#counter').text(data);
+    console.log(data);
+
+    function increment() {
+        console.log('Increment function called');
+    data++;
+    console.log('Updated data:', data);
+    $('#counter').text(data);
+    }
+<?php
+}
+?>
 
     $('#IB1').click(function () {
     console.log('Button clicked');
