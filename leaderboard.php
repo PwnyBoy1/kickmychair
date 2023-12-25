@@ -2,9 +2,10 @@
     session_start();
     include_once 'header.php';
     include_once './includes/dbh.inc.php';
+    include_once './includes/dbh.inc.php';
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
-    $user = $_SESSION['userid']; 
+    $signedInUser = isset($_SESSION['useruid']) ? $_SESSION['useruid'] : null;
     
     
     $startPage = 0; 
@@ -42,7 +43,9 @@
         
         if ($resultCheck > 0){
             while ($row = mysqli_fetch_assoc($scoresResults)) {
-            echo "<tr><td>{$rank}</td><td>{$row['users_uid']}</td><td>{$row['users_score']}</td></tr>";
+            $isSignedInUser = ($row['users_uid']==$signedInUser);
+            $style = $isSignedInUser ? 'style="background-color: #ffd700;"' : '';
+            echo "<tr $style><td>{$rank}</td><td>{$row['users_uid']}</td><td>{$row['users_score']}</td></tr>";
             $rank++;
         }
     } else{
@@ -51,14 +54,14 @@
         echo "</table>";
         
     echo "<div class='pagination'>";
-    if ($currentPage > 1){
-        echo "<a href='leaderboard.php?page=" . ($currentPage - 1) . "'>Prev-</a> ";
+    if ($currentPage > 1) {
+        echo "<a href='leaderboard.php?page=" . ($currentPage - 1) . "'>Prev</a> ";
     }
-    for ($i = 1; $i <= $totalPages; $i++){
+    for ($i = 1; $i <= $totalPages; $i++) {
         echo "<a href='leaderboard.php?page=$i'>$i</a> ";
     }
     if ($currentPage < $totalPages) {
-        echo "<a href='leaderboard.php?page=" . ($currentPage + 1) . "'>-Next</a>";
+        echo "<a href='leaderboard.php?page=" . ($currentPage + 1) . "'>Next</a>";
     }
 
     echo "</div>";

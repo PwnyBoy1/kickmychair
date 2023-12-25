@@ -8,7 +8,7 @@ if (isset($_POST['users_score'])){
     session_start();
     $user = $_SESSION['userid']; 
     $updateSql = "UPDATE users SET users_score = '$counterValue' WHERE users_id = '$user'";
-    $clickTime = microtime(true); // Current timestamp with microseconds
+    $clickTime = microtime(true);
     $formattedClickTime = date('Y-m-d H:i:s', (int) $clickTime) . '.' . sprintf('%03d', ($clickTime - floor($clickTime)) * 1000);
     $clickSql = "INSERT INTO click_data (users_id, click_time) VALUES ('$user', '$formattedClickTime')";
 
