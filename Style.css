@@ -210,15 +210,24 @@ audio {
     display: flex;
     justify-content: center;
 }
-
+.shop-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    border: solid 1px black;
+}
 .construction {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    border: solid 1px black;
+    max-height: 35vh;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .construction img{
-    max-height: 300px;
+    max-height: 175px;
 }
 
 .leaderboard-container{
