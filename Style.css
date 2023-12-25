@@ -12,8 +12,8 @@ body {
 .nav{
     display: flex;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     flex-wrap: wrap;
     
 }
@@ -22,6 +22,11 @@ body {
     font-family: ChairFont;
     font-size: 20px;
     
+}
+
+.nav li a:hover{
+    background-color: #45ff7d;
+    border-radius: 10px;
 }
 .links{
     list-style: none;
@@ -105,11 +110,7 @@ align-items: center;
     
     
 }
-@media (max-width: 768px) {
-    #counter {
-        font-size: 25vw;
-    }
-}
+
 .signup-body{
     display: flex;
     flex-direction: column;
@@ -215,21 +216,37 @@ audio {
     justify-content: center;
     align-items: center;
     height: 70vh;
-    border: solid 1px black;
 }
 .construction {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px black;
     max-height: 35vh;
     flex-wrap: wrap;
     gap: 10px;
 }
 .construction img{
-    max-height: 175px;
+    max-height: 300px;
 }
-
+.aboutUs-container{
+    display:flex;
+    justify-content: center;
+    font-family: 'ChairFont';
+    flex-direction: column;
+    align-items: center;
+    
+}
+.aboutUs-text{
+    width: 70vh;
+    text-align: center;
+    margin: 10px;
+    font-size: 18px;
+}
+.aboutUs-banner img{
+    width: 30vw;
+    max-height: auto;
+    margin: 10px;
+}
 .leaderboard-container{
     display: flex;
     flex-direction: column;
@@ -277,4 +294,18 @@ td{
 }
 .table-header{
     font-size: 30px;
+}
+@media (max-width: 768px) {
+    #counter {
+        font-size: 25vw;
+    }
+    .aboutUs-banner img{
+        width: 80vw;
+}
+.construction img{
+    max-height: 175px;
+}
+.aboutUs-text{
+    width: 40vh;
+}
 }
