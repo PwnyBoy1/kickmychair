@@ -4,16 +4,22 @@ session_start();
 ?>
     <div class="login-body">
         <div class="login-container">
+        <?php
+        if (isset($_GET['error'])) {
+            $errorMessage = $_GET['error'];
+            echo "<p style='color: red;'>$errorMessage</p>";
+        }
+        ?>
             <h2>Log in</h2>
             <form class="login-form" action="./includes/login.inc.php" method="post">
                 
                 <div class="input-container">
-                    <input type="text" name="uid" required>
+                    <input type="text" name="uid">
                     <label class="placeholder">Username or Email</label>
                 </div>
                 
                 <div class="input-container">
-                    <input type="password" name="pwd" required>
+                    <input type="password" name="pwd">
                     <label class="placeholder">Password</label>
                 </div>
                
