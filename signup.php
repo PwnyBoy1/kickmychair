@@ -7,33 +7,39 @@ session_start();
     <link rel="stylesheet" href="Style.css" type="text/css">
 </head>
 <div class="signup-body">
+<?php
+    if (isset($_GET['error'])) {
+        $errorMessage = $_GET['error'];
+        echo "<p style='color: red;'>$errorMessage</p>";
+    }
+    ?>
 
         <div class="form-container" >
             <h2>Sign Up</h2>
             <form class="signup-form" action="./includes/signup.inc.php" method="post">
                 
                 <div class="input-container">
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name">
                     <label class="placeholder">Full Name</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="text" name="email" id="email" required>
+                    <input type="text" name="email" id="email">
                     <label class="placeholder">Email</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="text" name="uid" id="uid" required>
+                    <input type="text" name="uid" id="uid">
                     <label class="placeholder">Username</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="password" name="pwd" id="pwd" required>
+                    <input type="password" name="pwd" id="pwd">
                     <label class="placeholder">Password</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="password" name="pwdRepeat" id="pwdRepeat" required>
+                    <input type="password" name="pwdRepeat" id="pwdRepeat">
                     <label class="placeholder">Repeat Password</label>
                 </div>
 

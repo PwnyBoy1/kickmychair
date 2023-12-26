@@ -19,7 +19,7 @@ body {
 }
 .nav li{
     text-decoration: none;
-    font-family: ChairFont;
+    font-family: 'ChairFont';
     font-size: 20px;
     
 }
@@ -307,5 +307,8 @@ td{
 }
 .aboutUs-text{
     width: 40vh;
+}
+.nav li {
+    font-size: 15px;
 }
 }

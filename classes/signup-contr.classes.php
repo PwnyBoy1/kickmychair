@@ -17,30 +17,35 @@ class SignupContr extends Signup{
     }
     public function signupUser(){
         if($this->emptyInput() == false){
-            //echo "Empty input!";
-            header("location: ../index.php?error=emptyinput");
+            $error = "Empty input!";
+            header("location: ../signup.php?error=$error");
             exit();
         }
-            //echo "Invalid username!";
+    
         if($this->invalidUid() == false){
-            header("location: ../index.php?error=username");
-            exit();
-         }
-        //echo "Invalid Email!";
-        if($this->invalidEmail() == false){
-            header("location: ../index.php?error=email");
+            $error = "Invalid username!";
+            header("location: ../signup.php?error=$error");
             exit();
         }
-        //echo "Passwords don't match!";
+    
+        if($this->invalidEmail() == false){
+            $error = "Invalid Email!";
+            header("location: ../signup.php?error=$error");
+            exit();
+        }
+    
         if($this->pwdMatch() == false){
-            header("location: ../index.php?error=passwordmatch");
+            $error = "Passwords don't match!";
+            header("location: ../signup.php?error=$error");
             exit();    
         }
-        //echo "Username or email taken!";
+    
         if($this->uidTakenCheck() == false){
-            header("location: ../index.php?error=useroremailtaken");
+            $error = "Username or Email taken!";
+            header("location: ../signup.php?error=$error");
             exit();
         }
+    
         $this->setUser($this->name, $this->uid, $this->pwd, $this->email);
     }
     private function emptyInput(){
