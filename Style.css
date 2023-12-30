@@ -7,6 +7,7 @@ body {
     line-height:1;
     background-image: linear-gradient(#e465ff,#3dcaff);
     background-attachment: fixed;
+    font-family: 'ChairFont';
 
 }
 .nav{
@@ -179,7 +180,6 @@ input:invalid + .placeholder {
     font-size: 14px;
 }
 
-
 .input-container {
     position: relative;
     width: 100%;
@@ -192,6 +192,7 @@ input:invalid + .placeholder {
     box-shadow: none;
     border: none;
     border-radius: 10px;
+    font-family: 'ChairFont';
 }
 
 .login-container h2{
