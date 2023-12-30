@@ -104,6 +104,14 @@ else{ ?>
     console.log('Updated data:', data);
     $('#counter').text(data);
     }
+    
+    var data=localStorage.getItem("counter") || 0;
+    document.getElementById('counter').innerText=data;
+    function increment(){
+    data++;
+    document.getElementById('counter').innerText=data;
+    localStorage.setItem("counter", data);
+}
 <?php
 }
 ?>
