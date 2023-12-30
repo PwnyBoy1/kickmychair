@@ -171,13 +171,14 @@ align-items: center;
     pointer-events: none;
 }
 input:focus + .placeholder,
-input:valid + .placeholder{
+input:invalid + .placeholder {
     background-color: #e465ff;
     top:-10%;
     padding:5px 5px;
     border-radius: 5px;
     font-size: 14px;
 }
+
 
 .input-container {
     position: relative;
@@ -192,10 +193,6 @@ input:valid + .placeholder{
     border: none;
     border-radius: 10px;
 }
-
-    
-
-
 
 .login-container h2{
     text-align: center;

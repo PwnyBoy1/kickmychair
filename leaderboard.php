@@ -49,7 +49,7 @@
             $rank++;
         }
     } else{
-        echo "No results found.";
+        echo "No results! Try logging in!";
     }
         echo "</table>";
         
