@@ -19,27 +19,27 @@ session_start();
             <form class="signup-form" action="./includes/signup.inc.php" method="post">
                 
                 <div class="input-container">
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" required>
                     <label class="placeholder">Full Name</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="text" name="email" id="email">
+                    <input type="text" name="email" id="email" required>
                     <label class="placeholder">Email</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="text" name="uid" id="uid">
+                    <input type="text" name="uid" id="uid" required>
                     <label class="placeholder">Username</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="password" name="pwd" id="pwd">
+                    <input type="password" name="pwd" id="pwd" required>
                     <label class="placeholder">Password</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="password" name="pwdRepeat" id="pwdRepeat">
+                    <input type="password" name="pwdRepeat" id="pwdRepeat" required>
                     <label class="placeholder">Repeat Password</label>
                 </div>
 

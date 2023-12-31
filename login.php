@@ -14,12 +14,12 @@ session_start();
             <form class="login-form" action="./includes/login.inc.php" method="post">
                 
                 <div class="input-container">
-                    <input type="text" name="uid">
-                    <label class="placeholder">Username or Email</label>
+                    <input type="text" name="uid" required>
+                    <label class="placeholder">Username</label>
                 </div>
                 
                 <div class="input-container">
-                    <input type="password" name="pwd">
+                    <input type="password" name="pwd" required>
                     <label class="placeholder">Password</label>
                 </div>
                

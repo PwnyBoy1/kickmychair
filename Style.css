@@ -171,13 +171,14 @@ align-items: center;
     color: #000000;
     pointer-events: none;
 }
-input:focus + .placeholder,
-input:invalid + .placeholder {
+.input-container input:focus + .placeholder,
+.input-container input:valid + .placeholder {
     background-color: #e465ff;
-    top:-10%;
-    padding:5px 5px;
+    top: -10%;
+    padding: 5px 5px;
     border-radius: 5px;
     font-size: 14px;
+    animation: labelAnimation 0.3s ease;
 }
 
 .input-container {
