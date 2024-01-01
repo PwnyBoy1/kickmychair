@@ -4,12 +4,13 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1); error_reporting(E_ALL);
  class Signup extends Dbh {
 
-        protected function setUser($name, $uid, $pwd, $email){
-            $stmt = $this->connect()->prepare('INSERT INTO users (users_name, users_uid, users_pwd, users_email, users_score) VALUES (?,?,?,?, 0);');
+        protected function setUser($name, $uid, $pwd, $email, $localCounter){
+            $stmt = $this->connect()->prepare('INSERT INTO users (users_name, users_uid, users_pwd, users_email, users_score) VALUES (?,?,?,?,?);');
             
             $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+            
 
-            if(!$stmt->execute(array($name, $uid,$hashedPwd, $email))){
+            if(!$stmt->execute(array($name, $uid,$hashedPwd,$email,$localCounter))){
                 $stmt = null;
                 header("location: ../index.php?error=stmtfailed");
                 exit();

@@ -6,14 +6,14 @@ class SignupContr extends Signup{
     private $pwd;
     private $pwdRepeat;
     private $email;
-
-    public function __construct($name, $uid, $pwd, $pwdRepeat, $email){
+    private $localCounter;
+    public function __construct($name, $uid, $pwd, $pwdRepeat, $email, $localCounter){
         $this->name = $name;
         $this->uid = $uid;
         $this->pwd = $pwd;
         $this->pwdRepeat = $pwdRepeat;
         $this->email = $email;
-
+        $this->localCounter = $localCounter;
     }
     public function signupUser(){
         if($this->emptyInput() == false){
@@ -46,7 +46,7 @@ class SignupContr extends Signup{
             exit();
         }
     
-        $this->setUser($this->name, $this->uid, $this->pwd, $this->email);
+        $this->setUser($this->name, $this->uid, $this->pwd, $this->email, $this->localCounter);
     }
     private function emptyInput(){
         $result=false;

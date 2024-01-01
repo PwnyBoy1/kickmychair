@@ -3,7 +3,7 @@
 include_once 'header.php';
 include_once './includes/dbh.inc.php';
 include_once './classes/login.classes.php';
-
+session_start();
 $user = $_SESSION['userid'];
 
     $sql = "SELECT users_score FROM users WHERE users_id = '$user'";
@@ -81,7 +81,7 @@ if(isset($_SESSION["userid"])){ ?>
     function sendCounterToServer(counterValue) {
         $.ajax({
             type: 'POST',
-            url: 'update_counter.php',
+            url: './update_counter.php',
             data: { users_score: counterValue },
             success: function (response) {
                 console.log(response); // Log the response (for debugging)
@@ -94,24 +94,17 @@ if(isset($_SESSION["userid"])){ ?>
 <?php   
 }
 else{ ?>
-    var data = <?php echo json_encode($counterValue); ?>;
-    $('#counter').text(data);
-    console.log(data);
-
-    function increment() {
-        console.log('Increment function called');
-    data++;
-    console.log('Updated data:', data);
-    $('#counter').text(data);
-    }
-
-    var data=localStorage.getItem("counter") || 0;
+    var data=localStorage.getItem("counter");
     document.getElementById('counter').innerText=data;
     function increment(){
+    console.log('Local Increment function called');
     data++;
+    console.log('Updated Local data:', data);
     document.getElementById('counter').innerText=data;
     localStorage.setItem("counter", data);
+    
 }
+
 <?php
 }
 ?>
@@ -124,4 +117,6 @@ else{ ?>
         switchback();
     }, 200);
 });
+
 </script>
+
