@@ -23,7 +23,7 @@ class SignupContr extends Signup{
         }
     
         if($this->invalidUid() == false){
-            $error = "Invalid username!";
+            $error = "Invalid username! Only letters and numbers allowed. 3-15 characters long";
             header("location: ../signup.php?error=$error");
             exit();
         }
@@ -65,7 +65,11 @@ class SignupContr extends Signup{
             $result = false;
         }
         else{
-            $result = true;
+            if (strlen($this->uid) < 3 || strlen($this->uid) > 15) {
+                $result = false;
+            } else {
+                $result = true;
+            }
         }
         return $result;
     }

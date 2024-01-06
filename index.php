@@ -5,6 +5,7 @@ include_once './includes/dbh.inc.php';
 include_once './classes/login.classes.php';
 session_start();
 $user = $_SESSION['userid'];
+$counterValue = 0;
 
     $sql = "SELECT users_score FROM users WHERE users_id = '$user'";
     $result = $conn->query($sql);
@@ -95,7 +96,7 @@ if(isset($_SESSION["userid"])){ ?>
 }
 else{ ?>
     var data=localStorage.getItem("counter");
-    document.getElementById('counter').innerText=data;
+    document.getElementById('counter').innerText=data || 0;
     function increment(){
     console.log('Local Increment function called');
     data++;
