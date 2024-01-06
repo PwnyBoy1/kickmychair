@@ -34,18 +34,12 @@ class Login extends Dbh {
             
             if(!$stmt->execute(array($uid, $uid, $pwdHashed[0]['users_pwd']))){
                 $stmt = null;
-                header("location: ../login.php?error=stmtfailed");
+                $error="Something went terribly wrong on our end!";
+                header("location: ../login.php?error=$error");
                 exit();
 
             
             }
-            if($stmt->rowCount() == 0)
-            {
-                $stmt = null;
-                header("location: ../login.php?error=usernotfound");
-                exit();
-            }
-            
             $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
            session_start();
            $_SESSION["userid"] = $user[0]["users_id"];

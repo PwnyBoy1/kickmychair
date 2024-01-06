@@ -10,7 +10,7 @@ if(isset($_POST["submit"])) {
     $pwd = $_POST["pwd"];
     $pwdRepeat = $_POST["pwdRepeat"];
     $email = $_POST["email"];
-    $localCounter = $_POST["counterGlobal"];
+    $localCounter = $_POST["localCounter"];
     //Instantiate SignupContr Class
     include "../classes/dbh.classes.php";
     include "../classes/signup.classes.php";
@@ -19,9 +19,8 @@ if(isset($_POST["submit"])) {
 
     //Running error handlers and user signup
     $signup->signupUser();
-    echo "Form submitted successfully. Redirecting..."; // Display a message for debugging
-    exit();
-
+    $error = "Sign up was successful. Please Log in";
+    header("location: ../login.php?error=$error");
     //Going to back to front page
     // header("location: ../index.php?error=none");
     

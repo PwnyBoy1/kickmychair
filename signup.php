@@ -41,7 +41,7 @@ session_start();
                 <div class="input-container">
                     <input type="password" name="pwdRepeat" id="pwdRepeat" required>
                     <label class="placeholder">Repeat Password</label>
-                    <input type="hidden" name="counterGlobal" id="counterGlobal" value="0">
+                    <input type="hidden" name="localCounter" id="localCounter" value="0">
                 </div>
 
                 <button type="submit" name="submit">Sign Up</button>
@@ -55,7 +55,7 @@ session_start();
 <script>
     $(document).ready(function() {
         var counterValue = localStorage.getItem("counter")
-        $('#counterGlobal').val(counterValue);
+        $('#localCounter').val(counterValue);
 
         console.log('Counter value in signup.php:', counterValue);
 
